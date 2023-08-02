@@ -20,9 +20,11 @@ app.use(cors());
 
 // Define the schema and model for Bhagavad Gita verses
 const verseSchema = new mongoose.Schema({
+  ID: String,
   Chapter: Number,
   Verse: Number,
   Shloka: String,
+  Transliteration: String
 });
 
 const BhagavadGitaVerse = mongoose.model('BhagavadGitaVerse', verseSchema);
